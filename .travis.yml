@@ -10,5 +10,5 @@ after_success:
   - |
     if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
       docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-      make push
+      docker push romansavrulin/ffmpeg-cuda:latest
     fi

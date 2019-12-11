@@ -1,11 +1,14 @@
 # NVIDIA accelerated ffmpeg with docker 19.x
 
+[![Build Status](https://travis-ci.org/romansavrulin/ffmpeg-cuda-docker.svg?branch=master)](https://travis-ci.org/romansavrulin/ffmpeg-cuda-docker)
+[![Dockerhub link](https://img.shields.io/badge/hosted-dockerhub-22b8eb.svg)](https://hub.docker.com/r/willprice/nvidia-ffmpeg/)
+
 Inspired by https://github.com/dl-container-registry/ffmpeg
 
 ## Features
 
 * [NVENCODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures)
-*  [NVDECODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVDECFeatures)
+* [NVDECODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVDECFeatures)
 * [video codec: x264](https://www.videolan.org/developers/x264.html)
 * [video codec: x265](https://www.videolan.org/developers/x265.html)
 * [audio codec: AAC](https://github.com/mstorsjo/fdk-aac)
