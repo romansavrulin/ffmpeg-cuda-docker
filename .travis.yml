@@ -4,12 +4,12 @@ services:
   - docker
 
 script:
-  - docker build -t flexibity/ffmpeg-cuda:latest .
+  - docker build -t romansavrulin/ffmpeg-cuda:latest .
 
 after_success:
   - set -e
   - |
     if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
       docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-      docker push flexibity/ffmpeg-cuda:latest
+      docker push romansavrulin/ffmpeg-cuda:latest
     fi
