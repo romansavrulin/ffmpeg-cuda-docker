@@ -1,7 +1,7 @@
 # NVIDIA accelerated ffmpeg with docker 19.x
 
 [![Build Status](https://travis-ci.org/romansavrulin/ffmpeg-cuda-docker.svg?branch=master)](https://travis-ci.org/romansavrulin/ffmpeg-cuda-docker)
-[![Dockerhub link](https://img.shields.io/badge/hosted-dockerhub-22b8eb.svg)](https://hub.docker.com/r/willprice/nvidia-ffmpeg/)
+[![Dockerhub link](https://img.shields.io/badge/hosted-dockerhub-22b8eb.svg)](https://hub.docker.com/r/romansavrulin/ffmpeg-cuda)
 
 Inspired by https://github.com/dl-container-registry/ffmpeg
 
