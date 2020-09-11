@@ -58,15 +58,17 @@ Run the container mounting the current directory to `/workspace` processing
 `input.mp4` to `output.mp4` without any hardware acceleration
 
 ```bash
-docker run --rm -it --gpus all \
+docker run --rm -it \
     --volume $PWD:/workspace \
-    ffmpeg ffmpeg -i input.mp4 output.avi
+    ffmpeg -i input.mp4 output.avi
 ```
 
 ```bash
 docker run --rm -it --gpus all \
+    -e NVIDIA_VISIBLE_DEVICES=all \
+    -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,video \
     --volume $PWD:/workspace \
-    ffmpeg ffmpeg \
+    ffmpeg \
       -hwaccel_device 0 \
       -hwaccel cuvid \
       -c:v h264_cuvid \
@@ -79,6 +81,8 @@ Get a shell prompt inside the container, useful for debugging:
 
 ```bash
 docker run --rm -it --gpus all \
+    -e NVIDIA_VISIBLE_DEVICES=all \
+    -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,video \
     --volume $PWD:/workspace \
     --entrypoint bash
     ffmpeg
